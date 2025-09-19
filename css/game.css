@@ -1,40 +1,41 @@
-.bar-health {
-    width: 30%;
-    height: 20px;
-}
-
 .green {
-	background-color: green;
+    width:30%;
+    height:20px;
+    background-color: green;
 }
 
 .yellow {
-	background-color: yellow;
+    width:30%;
+    height:20px;
+    background-color: yellow;
 }
 
 .red {
-	background-color: red;
+    width:30%;
+    height:20px;
+    background-color: red;
 }
 
 img {
-	max-width: 200px;
+    max-width: 200px;
 }
 
 button {
-	width: 200px;
-	height: 30px;
-	border-radius: 5px;
-	border: 1px solid black;
-	background-color: slategray;
-	color: white;
-	font-family: "Comic Sans MS";
+    width:200px;
+    height:30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: slategrey;
+    color: white;
+    font-family: "Comic Sans MS";
 }
 
 button:hover {
-	cursor: pointer;
-	background-color: white;
-	color: black;
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
 
 button:active {
-	background-color: lightgray;
+    background-color: lightgray;
 }

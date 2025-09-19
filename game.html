@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+	<link rel="stylesheet" href="./css/game.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo e Padrões de Projeto</title>
-    <link rel="stylesheet" href="./css/game.css">
-</head>
-
-<body>
-<center>
-    <img id="face" src="./img/happy.png" alt="happy">
-
-    <div id="life" class="bar-health green"></div>
-    <p id="texto-vida"></p>
-
-    <button id="btAtack">Atacar</button>
-    <br><br>
-
-</center>
-
-<script src="./js/game.js"></script>
-</body>
+	<body>
+		<center>
+			<img id="face" src="./img/happy.png" />
+			<div id="life-bar" class="green"></div>
+			<br />
+			<button id="btHit">DAR MURRO</button>
+		</center>
+		<script src="js/Player.js"></script>
+		<script src="js/SoundManager.js"></script>
+		<script src="js/InterfaceManager.js"></script>
+		<script src="js/app.js"></script>
+	</body>
 </html>
