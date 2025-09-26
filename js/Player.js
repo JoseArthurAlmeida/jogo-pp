@@ -1,26 +1,24 @@
 class Player {
-    static mySelf;
+	static mySelf;
 
-    constructor() {
-        this.life = 30;
-    }
+	constructor() {
+		this.life = 30;
+	}
 
-    static Instance() {
-        if (Player.mySelf === undefined) {
-            Player.mySelf = new Player();
-        }
-        return Player.mySelf;
-    }
+	static Instance() {
+		if (Player.mySelf === undefined) {
+			Player.mySelf = new Player();
+		}
+		return Player.mySelf;
+	}
 
-    isDead() {
-        return this.life === 0;
-    }
+	isDead() {
+		return this.life === 0;
+	}
 
-    takeDamage(damageValue) {
-        if (!this.isDead()) {
-            this.life -= damageValue;
-            SoundManager.Instance().playScreamAudio();
-        }
-    }
-
+	takeDamage(damageValue) {
+		if (!this.isDead()) {
+			this.life -= damageValue;
+		}
+	}
 }

@@ -2,24 +2,41 @@ class InterfaceManager {
 	static mySelf;
 
 	static Instance() {
+
 		if (InterfaceManager.mySelf === undefined) {
 			InterfaceManager.mySelf = new InterfaceManager();
 		}
+
 		return InterfaceManager.mySelf;
+
 	}
 
 	constructor() {
-		this.lifeElement = document.getElementById("life");
+		this.lifeBar = document.getElementById("life-bar");
+		this.playerFace = document.getElementById("player-face");
 	}
 
-	updateBarLife() {
-		let lifeBar = document.getElementById("life-bar");
-		lifeBar.style.width = Player.Instance().life + "%";
+	updateLifeBar(playerLife) {
 
-		if (Player.Instance().life >= 20) {
-			lifeBar.className = "yellow";
+		this.lifeBar.style.width = playerLife + "%";
+
+		if (playerLife >= 20) {
+			this.lifeBar.className = "yellow";
 		} else {
-			lifeBar.className = "red";
+			this.lifeBar.className = "red";
 		}
+
+	}
+
+	updatePlayerFace(isDead) {
+
+		if (!isDead) {
+			this.playerFace.src = "./img/hit.png";
+			setTimeout(() => this.playerFace.src = "./img/happy.png", 200);
+		}
+		else {
+			this.playerFace.src = "./img/dead.png";
+		}
+
 	}
 }
