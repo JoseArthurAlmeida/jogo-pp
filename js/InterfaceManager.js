@@ -39,4 +39,13 @@ class InterfaceManager {
 		}
 
 	}
+
+	getNotification(notification) {
+		switch (notification.type) {
+			case Notification.PLAYER_DAMAGED:
+				this.updateLifeBar(notification.content);
+				this.updatePlayerFace(notification.content === 0);
+				break;
+		}
+	}
 }
