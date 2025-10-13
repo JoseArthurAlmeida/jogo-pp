@@ -2,6 +2,7 @@ class Player {
 
     static mySelf;
     static observers = [];
+    #jaDeuGritoDaMorte = false;
 
     constructor() {
         this.life = 30;
@@ -9,7 +10,7 @@ class Player {
 
     static Instance() {
 
-        if(Player.mySelf === undefined) {
+        if (Player.mySelf === undefined) {
             Player.mySelf = new Player();
         }
 
@@ -32,17 +33,14 @@ class Player {
     }
 
     takeDamage(damageValue) {
+        this.life -= damageValue;
+        this.life = Math.max(0, this.life);
 
-        if(!this.isDead()) {
-            this.life -= damageValue;
-            this.notifyObservers(new Notification(Notification.PLAYER_DAMAGED, this.life));
-        }
-        else {
+        this.notifyObservers(new Notification(Notification.PLAYER_DAMAGED, this.life));
+
+        if (this.isDead() && !this.#jaDeuGritoDaMorte) {
+            this.#jaDeuGritoDaMorte = true;
             this.notifyObservers(new Notification(Notification.PLAYER_DEAD, this.life));
         }
-
-
-
     }
-
 }

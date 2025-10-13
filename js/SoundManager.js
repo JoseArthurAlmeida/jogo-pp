@@ -2,19 +2,19 @@ class SoundManager {
 
     static mySelf;
 
-    static Instance() {
+    static Instance(screamAudio, dieAudio) {
 
         if(SoundManager.mySelf === undefined) {
-            SoundManager.mySelf = new SoundManager();
+            SoundManager.mySelf = new SoundManager(screamAudio, dieAudio);
         }
 
         return SoundManager.mySelf;
 
     }
 
-    constructor() {
-        this.screamAudio = new Audio("./audio/scream.mp3");
-        this.dieAudio = new Audio("./audio/die.mp3");
+    constructor(screamAudio, dieAudio) {
+        this.screamAudio = screamAudio;
+        this.dieAudio = dieAudio;
     }
 
     playScreamAudio() {
@@ -30,7 +30,7 @@ class SoundManager {
         switch(notification.type) {
 
             case Notification.PLAYER_DAMAGED:
-                this.playScreamAudio();
+                if (notification.content > 0 ) this.playScreamAudio();
                 break;
 
             case Notification.PLAYER_DEAD:

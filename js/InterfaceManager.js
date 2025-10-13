@@ -1,19 +1,19 @@
 class InterfaceManager {
 	static mySelf;
 
-	static Instance() {
+	static Instance(lifeBar, playerFace) {
 
 		if (InterfaceManager.mySelf === undefined) {
-			InterfaceManager.mySelf = new InterfaceManager();
+			InterfaceManager.mySelf = new InterfaceManager(lifeBar, playerFace);
 		}
 
 		return InterfaceManager.mySelf;
 
 	}
 
-	constructor() {
-		this.lifeBar = document.getElementById("life-bar");
-		this.playerFace = document.getElementById("player-face");
+	constructor(lifeBar, playerFace) {
+		this.lifeBar = lifeBar;
+		this.playerFace = playerFace;
 	}
 
 	updateLifeBar(playerLife) {
