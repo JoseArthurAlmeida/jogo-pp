@@ -39,3 +39,7 @@ button:hover {
 button:active {
     background-color: lightgray;
 }
+
+td {
+    padding: 20px;
+}
