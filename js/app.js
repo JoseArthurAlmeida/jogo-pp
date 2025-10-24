@@ -1,5 +1,7 @@
-let btHit = document.getElementById("btHit");
+let buttonHit = document.getElementById("button-hit");
 
-btHit.onclick = function () {
+buttonHit.onclick = function () {
 	Game.Instance().attackPlayer(10);
 };
+
+Game.Instance().showMonsters();

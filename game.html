@@ -1,39 +1,40 @@
 <html>
 	<head>
-		<title>Game Singleton Observer</title>
+		<title>Game - Padrões de Projeto</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./css/game.css" />
 	</head>
 
 	<body>
+		<h1 id="title">Game - Singleton, Observer, Factory, Dependency Injection</h1>
 		<center>
 			<table>
 				<tbody>
 					<tr>
 						<td>
-							<img id="player-face" src="./img/monster1.png" />
-							<div id="life-bar" class="green"></div>
+							<img id="enemy-face-1" src="./img/monster1.png" />
+							<div id="enemy-life-bar-1" class="green"></div>
 							<br />
-							<button id="btHit">DAR MURRO</button>
+							<button id="button-hit-1">DAR MURRO</button>
 						</td>
 						<td>
-							<img id="player-face" src="./img/monster2.png" />
-							<div id="life-bar" class="green"></div>
+							<img id="enemy-face-2" src="./img/monster2.png" />
+							<div id="enemy-life-bar-2" class="green"></div>
 							<br />
-							<button id="btHit">DAR MURRO</button>
+							<button id="button-hit-2">DAR MURRO</button>
 						</td>
 						<td>
-							<img id="player-face" src="./img/monster3.png" />
-							<div id="life-bar" class="green"></div>
+							<img id="enemy-face-3" src="./img/monster3.png" />
+							<div id="enemy-life-bar-3" class="green"></div>
 							<br />
-							<button id="btHit">DAR MURRO</button>
+							<button id="button-hit-3">DAR MURRO</button>
 						</td>
 						<td>
-							<img id="player-face" src="./img/monster4.png" />
-							<div id="life-bar" class="green"></div>
+							<img id="enemy-face-4" src="./img/monster4.png" />
+							<div id="enemy-life-bar-4" class="green"></div>
 							<br />
-							<button id="btHit">DAR MURRO</button>
+							<button id="button-hit-4">DAR MURRO</button>
 						</td>
 					</tr>
 					<tr>
@@ -42,7 +43,7 @@
 								<img id="player-face" src="./img/happy.png" />
 								<div id="life-bar" class="green"></div>
 								<br />
-								<button id="btHit">DAR MURRO</button>
+								<button id="button-hit">DAR MURRO</button>
 							</center>
 						</td>
 					</tr>
@@ -53,7 +54,9 @@
 		<script src="js/SoundManager.js"></script>
 		<script src="js/InterfaceManager.js"></script>
 		<script src="js/Notification.js"></script>
-		<script src="js/app.js"></script>
+		<script src="js/Monster.js"></script>
+		<script src="js/MonsterFabric.js"></script>
 		<script src="js/Game.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>

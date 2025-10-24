@@ -1,45 +1,72 @@
 .green {
-    width:30%;
-    height:20px;
-    background-color: green;
+	width: 30%;
+	height: 20px;
+	background-color: green;
 }
 
 .yellow {
-    width:30%;
-    height:20px;
-    background-color: yellow;
+	width: 30%;
+	height: 20px;
+	background-color: yellow;
 }
 
 .red {
-    width:30%;
-    height:20px;
-    background-color: red;
+	width: 30%;
+	height: 20px;
+	background-color: red;
 }
 
 img {
-    max-width: 200px;
+	max-width: 200px;
 }
 
 button {
-    width:200px;
-    height:30px;
-    border-radius: 5px;
-    border: 1px solid black;
-    background-color: slategrey;
-    color: white;
-    font-family: "Comic Sans MS";
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: slategrey;
+	color: white;
+	font-family: "Comic Sans MS";
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
+	cursor: pointer;
+	background-color: white;
+	color: black;
 }
 
 button:active {
-    background-color: lightgray;
+	background-color: lightgray;
 }
 
 td {
-    padding: 20px;
+	padding: 20px;
+}
+
+.blue {
+	width: 30%;
+	height: 20px;
+	background-color: #4495f3;
+}
+
+.yellow-monster {
+	width: 30%;
+	height: 20px;
+	background-color: #f7c000;
+}
+.orange-monster {
+	width: 30%;
+	height: 20px;
+	background-color: #ea483c;
+}
+.pink-monster {
+	width: 30%;
+	height: 20px;
+	background-color: #df2867;
+}
+
+#title {
+	font-family: "Comic Sans MS";
+	text-align: center;
 }
