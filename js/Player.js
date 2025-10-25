@@ -7,7 +7,11 @@ class Player {
     constructor() {
         this.life = 30;
     }
-
+    
+    /**
+     * Retorna a instância única do Player (Singleton).
+     * @returns {Player} A instância do Player. <--- ISTO É CRÍTICO
+     */
     static Instance() {
 
         if (Player.mySelf === undefined) {
@@ -18,6 +22,10 @@ class Player {
 
     }
 
+    /**
+     * Adiciona um observador ao player.
+     * @param {Function} observer - A função a ser chamada na notificação.
+     */
     addObserver(observer) {
         Player.observers.push(observer);
     }
